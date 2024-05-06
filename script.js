@@ -10,6 +10,7 @@ function StartGame() {
     GenerateQuest();
     heart = 3;
     punctuation = 0;
+    document.getElementById("punctuationSpan").innerHTML = punctuation;
 };
 let lastNumber;
 function GenerateQuest() {

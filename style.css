@@ -203,6 +203,14 @@ body {
     -webkit-text-stroke-width: 2px;
     text-align: center;
 }
+.block-click {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+}
 @keyframes anim-heart-lose {
     0% {
         color: rgb(255, 0, 0);

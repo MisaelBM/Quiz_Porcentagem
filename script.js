@@ -68,6 +68,7 @@ function GenerateQuest() {
                 </div>
             </div>
         `;
+        document.getElementById("blockClick").style.display = "none";
         document.querySelectorAll(".button-response-div").forEach(e => {
             let valueButton = e.childNodes[3];
             valueButton = valueButton.dataset.value;
@@ -118,6 +119,7 @@ function GenerateQuest() {
                 </div>
             </div>
         `;
+        document.getElementById("blockClick").style.display = "none";
         document.querySelectorAll(".button-response-div").forEach(e => {
             let valueButton = e.childNodes[3];
             valueButton = valueButton.dataset.value;
@@ -126,6 +128,7 @@ function GenerateQuest() {
     };
 };
 function UserResponse(valueResponse) {
+    document.getElementById("blockClick").style.display = "flex";
     systemResponse == valueResponse ? NextQuest(true) : LoseHeart();
 };
 function NextQuest(right) {
@@ -164,6 +167,7 @@ function FinishGame() {
             document.getElementById("endGame").style.display = "none";
             document.getElementById("mainHome").style.display = "flex";
             document.getElementById("mainGame").style.display = "none";
+            document.getElementById("blockClick").style.display = "none";
             for (let i = 1; i < 4; i++) {
                 document.getElementById(`heart${i}`).style.color = "red";
             };

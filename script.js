@@ -72,7 +72,7 @@ function GenerateQuest() {
         document.querySelectorAll(".button-response-div").forEach(e => {
             let valueButton = e.childNodes[3];
             valueButton = valueButton.dataset.value;
-            e.addEventListener('click', () => UserResponse(valueButton));
+            e.addEventListener('click', () => UserResponse(parseFloat(valueButton)));
         });
     } else {
         systemResponse = percentage;
@@ -123,7 +123,7 @@ function GenerateQuest() {
         document.querySelectorAll(".button-response-div").forEach(e => {
             let valueButton = e.childNodes[3];
             valueButton = valueButton.dataset.value;
-            e.addEventListener('click', () => UserResponse(valueButton));
+            e.addEventListener('click', () => UserResponse(parseFloat(valueButton)));
         });
     };
 };

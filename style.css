@@ -126,7 +126,8 @@ body {
     background-color: white;
 }
 .button-response-div:hover .letter {
-    background-color: chartreuse;
+    background-color: black;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;

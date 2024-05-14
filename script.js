@@ -131,6 +131,7 @@ function GenerateQuest() {
 };
 function UserResponse(valueResponse) {
     document.getElementById("blockClick").style.display = "flex";
+    console.log(systemResponse, valueResponse, systemResponse == valueResponse)
     systemResponse == valueResponse ? NextQuest(true) : LoseHeart();
 };
 function NextQuest(right) {

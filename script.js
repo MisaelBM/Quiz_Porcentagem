@@ -24,6 +24,11 @@ function GenerateQuest() {
     let typeQuest = parseInt(Math.random() * 2);
     if (typeQuest == 0) {
         systemResponse = (numberQuest / 100) * percentage;
+        systemResponse = systemResponse.toString();
+        let strSystem = systemResponse.slice(systemResponse.indexOf("."));
+        strSystem = strSystem.slice(0, 3);
+        systemResponse = systemResponse.slice(0, systemResponse.indexOf(".")) + strSystem;
+        systemResponse = parseFloat(systemResponse);
         let arrResponse = [];
         function NotResponse() {
             let notRes;

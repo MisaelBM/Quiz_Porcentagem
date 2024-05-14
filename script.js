@@ -1,3 +1,5 @@
+const punctuationSound = new Audio("short-success-sound-glockenspiel-treasure-video-game-6346.mp3");
+const erroSound = new Audio("error-126627.mp3");
 document.getElementById("buttonPlay").addEventListener('click', () => {
     document.getElementById("mainHome").style.display = "none";
     document.getElementById("mainGame").style.display = "flex";
@@ -133,6 +135,7 @@ function UserResponse(valueResponse) {
 };
 function NextQuest(right) {
     if (right) {
+        punctuationSound.play();
         document.getElementById("quest").style.animation = "anim-right-quest 1s ease";
         setTimeout(
             function () {
@@ -148,6 +151,7 @@ function NextQuest(right) {
 };
 function LoseHeart() {
     heart--;
+    erroSound.play();
     document.getElementById("quest").style.animation = "anim-erro-quest 1s ease";
     document.getElementById(`heart${heart + 1}`).style.animation = "anim-heart-lose 1s ease";
     document.getElementById(`heart${heart + 1}`).style.color = "rgb(49, 49, 49)";
